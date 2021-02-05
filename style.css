@@ -1,0 +1,95 @@
+@charset "utf-8";
+* {
+	box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(253, 229, 250, 0.596);
+}
+
+#wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
+
+    grid-template-areas:"head"
+                        "conten"
+                        "signup"
+                        "feature_one"
+                        "feature_two"
+                        "feature_tree";
+}
+
+header{
+    background-color: rgb(223, 159, 159);
+    grid-area: head;
+}
+
+.content{
+    background-color: rgb(162, 211, 211);
+    grid-area: conten;
+}
+
+.signup{
+    background-color: rgb(182, 143, 219);
+    grid-area: signup;
+}
+
+.feature_one{
+    background-color: rgb(223, 149, 122);
+    grid-area: feature_one;
+}
+
+.feature_two{
+    background-color: rgb(190, 184, 184);
+    grid-area: feature_two;
+}
+
+.feature_tree{
+    background-color: rgb(139, 211, 139);
+    grid-area: feature_tree;
+}
+
+@media screen and (min-width: 700px){
+
+    #wrapper{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    
+        grid-template-areas:"head head"
+                            "conten conten"
+                            "signup feature_one"
+                            "feature_two feature_tree";
+    }
+}
+
+@media screen and (min-width: 1050px){
+
+    #wrapper{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    
+        grid-template-areas:"head head head"
+                            "feature_one feature_tree feature_two"
+                            "signup signup signup"
+                            "conten conten conten";
+    }
+
+   
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+}
+
+ul{
+    list-style: none;
+    display:flex;
+    gap:2em;
+}
+
